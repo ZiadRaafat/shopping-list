@@ -5,9 +5,135 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #caf0f8;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1.Title{
+  text-align: center;
+  color: white;
+  text-shadow: 
+  -2px -2px 0 #000,  
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  2px 2px 0 #000;
+}
+
+.App-header{
+  background-color: #90e0ef;
+  border-bottom: 1px solid gray;
+}
+
+.hbutton{
+  background-color: #0077b6;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.5em;
+}
+.HContainer{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 5%
+}
+.ListBodyContainer{
+
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+  width:100rem;
+  height:30rem;
+  margin: auto;
+  margin-top: 10%;
+
+}
+
+.addItem{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.addItemContainer{
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+  width:30rem;
+  height:30rem;
+  margin: auto;
+}
+
+.submitButton{
+  background-color: #0077b6;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.5em;
+  margin-top: 30%;
+}
+
+.addItemForm{
+ display: flex;
+ flex-direction: column;
+ gap:10%;
+ margin: 100px;
+}
+
+.ListBodyContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: flex-start;
+  flex-basis: 100%;
+}
+
+.listItem {
+  border: 1px solid black;
+  padding: 10px;
+  min-width: 200px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  position: relative;
+  
+
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: space-between;
+  
+  
+}
+
+.listButton{
+  background-color: #0077b6;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1em;
+  margin-top: 10%;
+}
+
+.listButton2 {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red; 
+  color: white;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
 }

@@ -1,24 +1,43 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Header from './Header';
+import ListBody from './ListBody';
+import AddItem from './AddItem';
+import { useState } from 'react';
+
+
+
+
+
 
 function App() {
+
+
+  const [items,setItems]=useState([]);
+
+const addItem=(newItem)=>{
+  setItems([...items,newItem]);
+}
   return (
+    <Router>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Header />
       </header>
+      <Switch>
+        <Route exact path="/">
+             
+        <ListBody items={items} setItems={setItems}/>
+        
+        </Route>
+        <Route path="/add">
+          <AddItem onAddItem={addItem}/>
+        </Route>
+      </Switch>
+
     </div>
+    </Router>
   );
 }
 
