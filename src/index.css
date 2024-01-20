@@ -145,4 +145,9 @@ h1.Title{
 }
 .CheckoutList {
   border: 1px solid #000;
+  text-align: center;
+}
+
+.successMessage{
+  text-align: center;
 }

@@ -19,6 +19,8 @@ function App() {
 
   const [viewItems,setViewItems]=useState([]);
 
+  const [viewTotal,setTotal]=useState(0);
+
 
 
 const addItem=(newItem)=>{
@@ -36,14 +38,16 @@ const setViewItem=(newViewItems)=>{
       <Switch>
         <Route exact path="/">
              
-        <ListBody items={items} setItems={setItems} viewItems={viewItems} setViewItems={setViewItems}/>
+        <ListBody items={items} setItems={setItems} viewItems={viewItems} setViewItems={setViewItems}
+        viewTotal={viewTotal} setTotal={setTotal}/>
         
         </Route>
         <Route path="/add">
           <AddItem onAddItem={addItem}/>
         </Route>
         <Route path="/checkout">
-          <Checkout viewItems={viewItems} setViewItems={setViewItem}/>
+          <Checkout viewItems={viewItems} setViewItems={setViewItem} viewTotal={viewTotal}
+          setTotal={setTotal}/>
         </Route>
       </Switch>
 

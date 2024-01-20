@@ -1,6 +1,10 @@
+import React, { useState } from 'react';
 
 
-const Checkout = ({viewItems}) => {
+const Checkout = ({viewItems,viewTotal,setTotal}) => {
+
+  
+  
     return (
         <div className="CheckoutList">
             <h1>
@@ -9,10 +13,11 @@ Order Details
 <div className="CheckoutDetails">
         {viewItems.map((viewItem, index) => (
           <div key={index}>
-            {viewItem.name}
+            {viewItem.name}: x{viewItem.quantity}   ${viewItem.total}
           </div>
         ))}
       </div>
+      Total: ${viewTotal}
     </div>
   );
 };
