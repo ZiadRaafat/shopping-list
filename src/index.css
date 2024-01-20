@@ -125,15 +125,21 @@ h1.Title{
   cursor: pointer;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); 
-  display: flex;
-  justify-content: center;
+
+
+.CheckoutList h1{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.CheckoutDetails{
+
+  border: 1px solid gray;
   align-items: center;
-  z-index: 1000; 
+  justify-content: center;
+  width:100%;
+  height:30%;
+  margin: auto;
+  margin-top: 10%;
+
 }

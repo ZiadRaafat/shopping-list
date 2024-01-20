@@ -5,6 +5,7 @@ import Header from './Header';
 import ListBody from './ListBody';
 import AddItem from './AddItem';
 import { useState } from 'react';
+import Checkout from './Checkout';
 
 
 
@@ -33,6 +34,9 @@ const addItem=(newItem)=>{
         </Route>
         <Route path="/add">
           <AddItem onAddItem={addItem}/>
+        </Route>
+        <Route path="/checkout">
+          <Checkout/>
         </Route>
       </Switch>
 
