@@ -1,4 +1,4 @@
-const ListBody = ({items,setItems}) => {
+const ListBody = ({items,setItems,viewItems,setViewItems}) => {
 
   const countUp=(index)=>{
     items[index].quantity+=1;
@@ -30,7 +30,7 @@ const ListBody = ({items,setItems}) => {
             {item.name}: x{item.quantity}<br></br><br></br> Total: ${item.total}<br></br>
             <div className="buttonContainer">
             <button className="listButton" onClick={()=>countUp(index)}>+</button> <button className="listButton" onClick={()=>countDown(index)}>-</button>
-            <button className="listButton">Add to Cart</button>
+            <button className="listButton" onClick={()=>setViewItems(items)}>Add to Cart</button>
           </div>
           </div>
         ))}

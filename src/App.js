@@ -17,8 +17,15 @@ function App() {
 
   const [items,setItems]=useState([]);
 
+  const [viewItems,setViewItems]=useState([]);
+
+
+
 const addItem=(newItem)=>{
   setItems([...items,newItem]);
+}
+const setViewItem=(newViewItems)=>{
+  setViewItems([...viewItems,newViewItems]);
 }
   return (
     <Router>
@@ -29,14 +36,14 @@ const addItem=(newItem)=>{
       <Switch>
         <Route exact path="/">
              
-        <ListBody items={items} setItems={setItems}/>
+        <ListBody items={items} setItems={setItems} viewItems={viewItems} setViewItems={setViewItems}/>
         
         </Route>
         <Route path="/add">
           <AddItem onAddItem={addItem}/>
         </Route>
         <Route path="/checkout">
-          <Checkout/>
+          <Checkout viewItems={viewItems} setViewItems={setViewItem}/>
         </Route>
       </Switch>
 
